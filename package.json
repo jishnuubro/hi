@@ -1,0 +1,14 @@
+{
+  "name": "pylauncher-electron",
+  "version": "1.0.0",
+  "description": "Offline Minecraft Launcher - HTML/CSS/JS UI with Electron (Node.js) backend for real game launching",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

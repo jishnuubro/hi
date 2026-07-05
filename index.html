@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>PyLauncher - Offline Minecraft Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ---------------- Login screen ---------------- -->
+  <section id="login-screen" class="screen">
+    <div class="card">
+      <h1>Offline Account তৈরি করুন</h1>
+      <label for="username-input">Username দিন:</label>
+      <input id="username-input" type="text" maxlength="16" placeholder="যেমন: Steve123" />
+      <button id="create-account-btn" class="primary-btn">Account তৈরি করে ঢুকুন</button>
+      <p id="java-status" class="status-text">Java চেক করা হচ্ছে...</p>
+      <p class="hint">(কোনো password/login লাগবে না — offline mode)</p>
+    </div>
+  </section>
+
+  <!-- ---------------- Main screen ---------------- -->
+  <section id="main-screen" class="screen hidden">
+    <div class="topbar">
+      <h2 id="welcome-text">স্বাগতম!</h2>
+      <button id="logout-btn" class="secondary-btn">Logout</button>
+    </div>
+
+    <label for="version-select">Version সিলেক্ট করুন:</label>
+    <div class="checkbox-row">
+      <input type="checkbox" id="snapshot-toggle" />
+      <label for="snapshot-toggle">Snapshot ভার্সনও দেখাও</label>
+    </div>
+    <select id="version-select"></select>
+
+    <div class="btn-row">
+      <button id="download-btn" class="primary-btn">Download / Install</button>
+      <button id="play-btn" class="primary-btn play" disabled>▶ Play</button>
+    </div>
+
+    <div class="progress-wrap">
+      <div id="progress-label" class="progress-label"></div>
+      <div class="progress-bar-outer">
+        <div id="progress-bar" class="progress-bar-inner"></div>
+      </div>
+    </div>
+
+    <label>Log:</label>
+    <div id="log-box" class="log-box"></div>
+  </section>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
